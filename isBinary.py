@@ -25,29 +25,25 @@ for i in range(len(str)):
         sublen=len(subs)
         print("before:",temp,"tl",len(temp),"subl:",sublen)
         if sublen>len(temp):
-            temp=subs
+            temp=subs[:]
         print("after:",temp,"tl",len(temp),"subl:",sublen)
-    if int(str[i])==0:
-        flag=0
-    if flag==0:
-        sublen=len(subs)
+    else:
         #print("sublen:", end=" ")
         #print(sublen)
         ##print("Templen (before update):", end=" ")
         #print(len(temp))
-        if sublen>=len(temp):
         #    #print("sublen:", end=" ")
         #    #print(sublen)
         #    print("Templen (before update):", end=" ")
         #    print(len(temp))
-             temp=subs
         #    print("Templen (after update):", end=" ")
         #    print(len(temp))
         #print("sub:", end =" ")
         #print(subs,len(subs))#prints only uptil penultimate substring
         del subs[0:sublen]
         sublen=len(subs)
-        print("sub after del:", sublen)
+        #print("sub after del:", sublen)
+        print("temp after del:",len(temp))
     #print(subs,"Flag:", flag)
 #print("temp:", end =" ")
 print(temp,len(temp)) #return last substring

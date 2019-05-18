@@ -12,6 +12,7 @@
 #        return(0)
 #    sum=0
 
+#Longest substring in string
 subs=[]
 temp=[]
 flag=0
